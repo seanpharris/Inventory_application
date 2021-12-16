@@ -9,9 +9,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * The Javadoc is located in a folder with the project folder labeled Javadoc.
  *
- * main method starts application
+ * Main is the start of application
  */
 public class InventoryApplication extends Application{
 
@@ -38,18 +37,18 @@ public class InventoryApplication extends Application{
     }
 
     void addTestData(Inv inv){
-        //Add InHouse Parts
+        //Add InHouse Parts test data
         Part a1=new InHouse(1,"Part A1",2.99,10,5,100,101);
         Part b=new InHouse(2,"Part B",3.99,9,5,100,102);
         inv.addPart(a1);
         inv.addPart(b);
 
-        //Add OutSourced Parts
+        //Add OutSourced Parts test data
         Part o1=new OutSource(6,"Part O1",2.99,10,5,100,"ACME Co.");
         Part p=new OutSource(7,"Part P",3.99,9,5,100,"ACME Co.");
         inv.addPart(o1);
         inv.addPart(p);
-        //Add allProducts
+        //Add Products test data
         Product prod1=new Product(100,"Product 1",9.99,20,5,100);
         prod1.addRelPart(a1);
         prod1.addRelPart(o1);
