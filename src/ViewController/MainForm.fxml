@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="464.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/11.0.1">
+    <AnchorPane layoutX="53.0" layoutY="54.0" prefHeight="307.0" prefWidth="423.0">
+        <TableView fx:id="partsTable" editable="true" prefHeight="251.0" prefWidth="423.0">
+            <columns>
+                <TableColumn fx:id="partIdColumn" prefWidth="93.0" text="Part Id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="partNameColumn" prefWidth="118.0" text="Part Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="partStockColumn" prefWidth="106.0" style="text-align: justify;" text="Inv Count">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="stock"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="partPriceColumn" prefWidth="105.0" text="Price">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="price"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <ButtonBar layoutX="79.0" layoutY="251.0" prefHeight="40.0" prefWidth="200.0">
+            <buttons>
+                <Button mnemonicParsing="false" onMouseClicked="#addPart" text="Add"/>
+                <Button mnemonicParsing="false" onMouseClicked="#modPart" text="Modify"/>
+                <Button mnemonicParsing="false" onMouseClicked="#delPart" text="Delete"/>
+            </buttons>
+        </ButtonBar>
+    </AnchorPane>
+    <AnchorPane layoutX="537.0" layoutY="54.0" prefHeight="307.0" prefWidth="414.0">
+        <ScrollBar/>
+        <TableView fx:id="prodTable" prefHeight="251.0" prefWidth="423.0">
+            <columns>
+                <TableColumn fx:id="prodIdColumn" prefWidth="93.0" text="Product ID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="prodID"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="prodNameColumn" prefWidth="118.0" text="Product Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="prodStockColumn" prefWidth="106.0" style="text-align: justify;" text="Inv Count">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="inStock"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="prodPriceColumn" prefWidth="105.0" text="Price">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="price"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <ButtonBar layoutX="79.0" layoutY="251.0" prefHeight="40.0" prefWidth="200.0">
+            <buttons>
+                <Button mnemonicParsing="false" onMouseClicked="#addProd" text="Add"/>
+                <Button mnemonicParsing="false" onMouseClicked="#modProd" text="Modify"/>
+                <Button mnemonicParsing="false" onMouseClicked="#delProd" text="Delete"/>
+            </buttons>
+        </ButtonBar>
+    </AnchorPane>
+    <Button layoutX="942.0" layoutY="414.0" mnemonicParsing="false" onMouseClicked="#closeProg" text="Exit"/>
+    <Label layoutX="53.0" layoutY="10.0" text="Parts">
+        <font>
+            <Font name="System Bold Italic" size="24.0"/>
+        </font>
+    </Label>
+    <Label layoutX="537.0" layoutY="10.0" text="Products">
+        <font>
+            <Font name="System Bold Italic" size="24.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="partSearchTxt" layoutX="327.0" layoutY="15.0" onKeyPressed="#searchForPart"/>
+    <TextField fx:id="prodSearchTxt" layoutX="811.0" layoutY="15.0" onKeyTyped="#searchForProd"/>
+    <Label layoutX="155.0" layoutY="361.0" text="Inventory Management System" textFill="#b2b2b2">
+        <font>
+            <Font name="System Bold Italic" size="48.0"/>
+        </font>
+    </Label>
+</AnchorPane>
