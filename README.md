@@ -1,7 +1,8 @@
 # Inventory Application
-## An application to store a variety of parts and products
-### Java, JavaFX
-#### Application features
+## This is a application to store a variety of parts and products using Java/JavaFX
+### It has a GUI that contains multiple views such as:
+* 
+Application features
 - Creation - UID for parts/products
 - Modification, and deleting of parts/products
 
